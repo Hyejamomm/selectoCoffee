@@ -1,0 +1,61 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box; cursor: url(./셀렉토이미지/cusur.png),auto;}
+ul{list-style: none;}
+a{color: black; text-decoration: none;}
+@font-face {font-family: 'NEXON Lv2 Gothic';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');font-weight: normal;font-style: normal;}
+
+
+
+/* main screen  */
+.container {width: 100%; height: 100vh;}
+section {display: flex; width: 100%; height: 100%;}
+/* main left */
+.main-left {width: 50vw; height: 100%; background-color: orange; position: relative; overflow: hidden;}
+.main-left>img {width: 100%; height: 100vh; object-fit: cover;}
+/* main right */
+.main-right {width: 50%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; overflow: hidden;}
+.main-right>img {width: 436px; height: auto; }
+/* content  */
+.content {width: 350px; height: 350px; background-color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #FF4713; padding: 45px; font-family: 'NEXON Lv2 Gothic'; transition: 0.2s; cursor: pointer;}
+.content:hover {top:49%;}
+.content2 {left: 10%; transform: translate(-10%,-50%); left: 10%; box-shadow: 14px 14px 6px 0 rgb(165 165 165 / 16%);}
+.content>li:nth-of-type(1) {font-size: 18px; padding-bottom: 30px; border-bottom: 2px #FF4713 solid; cursor: pointer;}
+.content>li:nth-of-type(2) {font-size: 28px; padding-top: 30px; cursor: pointer;}
+.content>img {width: 46.3px; padding-top: 90px; cursor: pointer;}
+.content>li>b{cursor: pointer;}
+/* circle  */
+.circle {width: 184px; height: 184px; position: absolute; bottom: 10%; right: 10%; transform: translate(0%, 10%);}
+.circle>img {width: 100%; height: 100%; position: absolute;}
+.circle>a>img {cursor: pointer; width: 35%; height: 25%; position: absolute; top: 50%; bottom: 50%; transform: translate(100%,-50%);}
+/* animation  */
+.active {animation-name: round; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear;}
+@keyframes round{
+0%{transform: rotate(0deg);}
+100%{ transform: rotate(360deg);}
+}
+
+
+
+
+/* 반응형 */
+@media (max-width: 1600px){
+    .content {top: 50%; left: 50%; transform: translate(-50%,-50%);}
+}
+@media (max-width: 1400px){
+    .circle {bottom: 13%; right: 50%; transform: translate(50%,-13%);} 
+}
+@media (max-width: 950px){
+    section {flex-direction: column; justify-content: space-between; background-color: #F2F1EE;}
+    .main-left {width: 100%; height: 49vh;}
+    .main-left>img {widtj:100%; height:49vh;}
+    .main-right {width: 100%; height: 49vh; background-color: white;}
+    .circle {display: none;}
+}
+@media (max-width: 550px){
+    .main-right>img {width: 100%; height: 100%; }
+}
+@media (max-width: 500px){
+    .content {width: 280px; height: 280px; padding: 30px 25px;}
+    .content>li:nth-of-type(1) {padding-bottom: 15px; font-size: 15px;}
+    .content>li:nth-of-type(2) {font-size: 24px; line-height: 30px;}
+    .content>img {padding-top: 80px;}
+}
